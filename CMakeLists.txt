@@ -86,8 +86,8 @@ set(COMMON_LIBS
 add_executable(VulkanTest ${SOURCE_AND_RESOURCE_ROOT_DIR}/main.cpp ${SPIRV_SHADERS})
 target_link_libraries(VulkanTest PRIVATE ${COMMON_LIBS})
 
-# add_executable(VulkanTestOri ${SOURCE_AND_RESOURCE_ROOT_DIR}/main_ba1.cpp ${SPIRV_SHADERS})
-# target_link_libraries(VulkanTestOri PRIVATE ${COMMON_LIBS})
+add_executable(VulkanTestOri ${SOURCE_AND_RESOURCE_ROOT_DIR}/main_ba1.cpp ${SPIRV_SHADERS})
+target_link_libraries(VulkanTestOri PRIVATE ${COMMON_LIBS})
 
 # --- 自定义目标 ---
 add_custom_target(test ALL COMMAND $<TARGET_FILE:VulkanTest>)

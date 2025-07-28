@@ -2,4 +2,9 @@
 tmp/
 src/main_ba1.cpp
 src/shaders/*.spv
-build/
+**/build/
+**/cmake-build-debug/
+
+.idea/
+
+
