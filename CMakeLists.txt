@@ -4,6 +4,7 @@ project(VulkanTestProject LANGUAGES CXX)
 # --- 定义包含路径 ---
 set(VULKAN_INCLUDE_PATH "/usr/include/vulkan")
 set(STB_INCLUDE_PATH "/home/eustia/E/code/c++/cppsoft/stb/")
+set(TINYOBJ_INCLUDE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/thirdParties/tinyobjloader")
 
 # --- 设置源文件和资源文件根目录 ---
 set(SOURCE_AND_RESOURCE_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
@@ -53,6 +54,8 @@ endforeach()
 
 # --- 复制其他运行时资源文件 (如果存在) ---
 file(COPY "${SOURCE_AND_RESOURCE_ROOT_DIR}/textures/" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/textures")
+file(COPY "${SOURCE_AND_RESOURCE_ROOT_DIR}/models/" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/models")
+file(COPY "${SOURCE_AND_RESOURCE_ROOT_DIR}/materials/" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/materials")
 
 
 # --- 全局编译选项 ---
@@ -65,6 +68,7 @@ set(CMAKE_BUILD_TYPE Release)
 include_directories(
     ${VULKAN_INCLUDE_PATH}
     ${STB_INCLUDE_PATH}
+    ${TINYOBJ_INCLUDE_PATH}
 )
 
 # --- 链接库 ---
