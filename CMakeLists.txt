@@ -3,7 +3,7 @@ project(VulkanTestProject LANGUAGES CXX)
 
 # --- 定义包含路径 ---
 set(VULKAN_INCLUDE_PATH "/usr/include/vulkan")
-set(STB_INCLUDE_PATH "/home/eustia/E/code/c++/cppsoft/stb/")
+set(STB_INCLUDE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/thirdParties/stb")
 set(TINYOBJ_INCLUDE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/thirdParties/tinyobjloader")
 
 # --- 设置源文件和资源文件根目录 ---
